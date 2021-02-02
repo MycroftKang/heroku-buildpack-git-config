@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir> <env-dir>
+
+ENV_DIR=$3
+GITHUB_USERNAME=`cat $ENV_DIR/GITHUB_USERNAME`
+GITHUB_TOKEN=`cat $ENV_DIR/GITHUB_TOKEN`
+
+git config --global url.https://${GITHUB_USERNAME}:${GITHUB_TOKEN}@github.com/.insteadOf https://github.com/
+
+echo "-----> Successfully configure Git"

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Git Configuration"
+exit 0
